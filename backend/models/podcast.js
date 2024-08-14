@@ -22,11 +22,11 @@ const podcasts = new mongoose.Schema({
     },
     user:
         {
-        type : mongoose.Types.ObjectId,  // mongodb obj id ko store karte jaynege 
+        type : mongoose.Types.ObjectId,  
         ref:"user",
         },          // ek user ek podcast create kar sakta hai
     category:{
-        type : mongoose.Types.ObjectId, // ek podcaast ek category ka hoga 
+        type : mongoose.Types.ObjectId, // ek podcast ek category ka hoga 
         ref:"category",
     }
     

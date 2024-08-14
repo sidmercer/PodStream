@@ -6,7 +6,7 @@ const category = new mongoose.Schema({
         unique: true,
         required:true,},
     
-    podcasts:{
+    podcasts:{                              // ek category ke andar multiple podcasts honge
         type : mongoose.Types.ObjectId, 
         ref:"podcasts",
     },

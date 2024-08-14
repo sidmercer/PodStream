@@ -17,7 +17,7 @@ const user = new mongoose.Schema({
     },
     podcasts:[
         {
-        type : mongoose.Types.ObjectId,  // mongodb obj id ko store karte jaynege 
+        type : mongoose.Types.ObjectId,  // mongodb  obj id ko store karte jaynege (as we know mongo db me datastore jo hota hai uska obj id milta hai)
         ref:"podcasts",
         },
     ],
@@ -25,5 +25,5 @@ const user = new mongoose.Schema({
 },
 {timestamps:true}
 );
-
+//after creating schema
 module.exports = mongoose.model("user",user);  // schema ready
