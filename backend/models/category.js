@@ -1,18 +1,18 @@
-const mongoose = require("mongoose");
+    const mongoose = require("mongoose");
 
-const category = new mongoose.Schema({
-    categoryName:{
-        type: String,
-        unique: true,
-        required:true,},
+    const category = new mongoose.Schema({
+        categoryName:{
+            type: String,
+            unique: true,
+            required:true,},
+        
+        podcasts:{                              // ek category ke andar multiple podcasts honge
+            type : mongoose.Types.ObjectId, 
+            ref:"podcasts",
+        },
     
-    podcasts:{                              // ek category ke andar multiple podcasts honge
-        type : mongoose.Types.ObjectId, 
-        ref:"podcasts",
     },
-   
-},
-{timestamps:true}
-);
+    {timestamps:true}
+    );
 
-module.exports = mongoose.model("user",user);  // schema ready
+    module.exports = mongoose.model("category",category);  // schema ready

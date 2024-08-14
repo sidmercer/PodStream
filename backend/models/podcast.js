@@ -34,4 +34,4 @@ const podcasts = new mongoose.Schema({
 {timestamps:true}
 );
 
-module.exports = mongoose.model("user",user);  // schema ready
+module.exports = mongoose.model("podcast",podcast);  // schema ready
